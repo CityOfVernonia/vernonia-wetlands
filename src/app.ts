@@ -43,10 +43,26 @@ const loadingScreen = new LoadingScreen({
   title,
 });
 
+const popupText = `<strong>This information is for reference only.</strong>
+<br><br>
+Official determination of wetlands is under the sole jurisdiction of the Dept. of State Lands and/or by a Dept. of State Lands approved consultant. Visit the <calcite-link href="https://www.oregon.gov/dsl/ww/pages/wetlandconservation.aspx" target="_blank">Dept. of State Lands Wetlands</calcite-link> website for more information.
+<br><br>
+Development in wetlands in Vernonia is regulated under <calcite-link href="https://www.vernonia-or.gov/municipal-code/title-9/" target="_blank">Title 9 Chapter 6 - Development in Wetlands</calcite-link>.`;
+
+const popupContent = (): HTMLDivElement => {
+  const div = document.createElement('div');
+  div.innerHTML = popupText;
+  return div;
+};
+
 new DisclaimerModal({
   title: 'Wetland Map Disclaimer',
   enableDontShow: false,
-  text: `Wetland layers herein include Vernonia Local Wetland Inventory, Oregon Dept. of State Lands Wetlands, and U.S. Fish and Wildlife Service National Wetlands Inventory.<br><br><strong>This information is for reference only.</strong> Official determination of wetlands is under the sole jurisdiction of the Dept. of State Lands and/or by a Dept. of State Lands approved consultant. Visit the <calcite-link href="https://www.oregon.gov/dsl/ww/pages/wetlandconservation.aspx" target="_blank">Dept. of State Lands Wetlands</calcite-link> website, or contact City Hall for more information.<br><br>${DisclaimerModal.getDefaultDisclaimer()}`,
+  text: `Wetland layers herein include Vernonia Local Wetland Inventory, Oregon Dept. of State Lands Wetlands, and U.S. Fish and Wildlife Service National Wetlands Inventory.
+  <br><br>
+  ${popupText}
+  <br><br>
+  ${DisclaimerModal.getDefaultDisclaimer()}`,
 });
 
 // layers
@@ -121,8 +137,6 @@ const cityLimits = new FeatureLayer({
   },
 });
 
-const popupText = `<strong>This information is for reference only.</strong> Official determination of wetlands is under the sole jurisdiction of the Dept. of State Lands and/or by a Dept. of State Lands approved consultant. Visit the <calcite-link href="https://www.oregon.gov/dsl/ww/pages/wetlandconservation.aspx" target="_blank">Dept. of State Lands Wetlands</calcite-link> website, or contact City Hall for more information.`;
-
 const national = new FeatureLayer({
   url: 'https://www.fws.gov/wetlands/arcgis/rest/services/Wetlands/MapServer/0',
   labelsVisible: false,
@@ -130,11 +144,7 @@ const national = new FeatureLayer({
   renderer: wetlands.national,
   popupTemplate: new PopupTemplate({
     title: 'USFW National Wetlands',
-    content: () => {
-      const div = document.createElement('div');
-      div.innerHTML = popupText;
-      return div;
-    },
+    content: popupContent,
   }),
 });
 
@@ -146,11 +156,7 @@ const state = new FeatureLayer({
   renderer: wetlands.state,
   popupTemplate: new PopupTemplate({
     title: 'DSL Oregon Wetlands',
-    content: () => {
-      const div = document.createElement('div');
-      div.innerHTML = popupText;
-      return div;
-    },
+    content: popupContent,
   }),
 });
 
@@ -162,11 +168,7 @@ const local = new FeatureLayer({
   renderer: wetlands.local,
   popupTemplate: new PopupTemplate({
     title: 'Vernonia Local Wetlands',
-    content: () => {
-      const div = document.createElement('div');
-      div.innerHTML = popupText;
-      return div;
-    },
+    content: popupContent,
   }),
 });
 

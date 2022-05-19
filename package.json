@@ -17,25 +17,24 @@
   "author": "COV-GIS",
   "license": "MIT",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.1.0",
-    "@typescript-eslint/parser": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
     "ansi-regex": ">=6.0.1",
-    "eslint": "^8.0.1",
-    "eslint-config-prettier": "^8.3.0",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "fs-extra": "^10.0.0",
-    "prettier": "^2.4.1",
-    "replace-in-file": "^6.3.1",
-    "sass": "^1.43.2",
-    "tslib": "^2.3.1",
-    "typescript": "^4.4.4",
-    "vite": "^2.6.10"
+    "fs-extra": "^10.1.0",
+    "prettier": "^2.6.2",
+    "replace-in-file": "^6.3.2",
+    "sass": "^1.51.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4",
+    "vite": "^2.9.9"
   },
   "dependencies": {
-    "@arcgis/core": "^4.21.2",
-    "@esri/calcite-components": "^1.0.0-beta.67",
-    "@vernonia/assessor-urls": "^1.0.2",
-    "@vernonia/core": "^1.0.50"
+    "@arcgis/core": "^4.23.7",
+    "@esri/calcite-components": "^1.0.0-beta.80",
+    "@vernonia/core": "^2.0.7"
   },
   "eslintConfig": {
     "env": {

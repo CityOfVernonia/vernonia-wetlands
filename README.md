@@ -8,7 +8,7 @@ City of Vernonia wetlands web map.
 
 ### Disclaimer
 
-Wetland layers herein include Vernonia Local Wetland Inventory, Oregon Dept. of State Lands Wetlands, and U.S. Fish and Wildlife Service National Wetlands Inventory.
+The Oregon Wetlands Database (2019) is for planning purposes only. It is an estimation of the occurrence and extent of wetlands in Oregon, and does not necessarily map all wetlands or represent wetlands that are subject to Federal or State jurisdiction. It should not be used as a substitute for a wetland determination or delineation performed by a qualified wetland specialist. Many polygons were derived only from aerial photo interpretation and may or may not meet wetland criteria in the field. Per current Federal and Oregon Wetland Mapping Standards, the Oregon Wetlands Database (2019) is "neither designed, nor intended, to support legal, regulatory, or jurisdictional analyses of wetland mapping products, nor does it attempt to differentiate between regulatory and non-regulatory wetlands."
 
 **This information is for reference only.**
 

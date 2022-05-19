@@ -24,7 +24,7 @@ import Layers from '@vernonia/core/dist/widgets/Layers';
 import '@vernonia/core/dist/widgets/Layers.css';
 
 import PrintSnapshot from '@vernonia/core/dist/widgets/PrintSnapshot';
-// import '@vernonia/core/dist/widgets/PrintSnapshot.css';
+import '@vernonia/core/dist/widgets/Snapshot.css';
 
 // config portal and auth
 esriConfig.portalUrl = 'https://gis.vernonia-or.gov/portal';
